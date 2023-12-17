@@ -10,12 +10,12 @@ import java.util.List;
 public class day1 {
     public static void main(String[] args){
         // Create ArrayList objects for original values and digits only
-        ArrayList<String> calibrationValues = new ArrayList<String>();
-        ArrayList<String> digits = new ArrayList<String>();
+        ArrayList<String> calibrationValues = new ArrayList<>();
+        ArrayList<String> digits = new ArrayList<>();
 
         // Create a hashmap for mapping the words to digits
         HashMap<String, String> conversions = new HashMap<String, String>();
-        List<String> hashmap_keys = new ArrayList<String>();
+        List<String> hashmap_keys = new ArrayList<>();
 
         // value is 54985
 
@@ -81,7 +81,6 @@ public class day1 {
             myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
-            e.printStackTrace();
         }
     }
 
