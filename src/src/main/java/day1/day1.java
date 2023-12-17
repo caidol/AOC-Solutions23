@@ -14,10 +14,8 @@ public class day1 {
         ArrayList<String> digits = new ArrayList<>();
 
         // Create a hashmap for mapping the words to digits
-        HashMap<String, String> conversions = new HashMap<String, String>();
+        HashMap<String, String> conversions = new HashMap<>();
         List<String> hashmap_keys = new ArrayList<>();
-
-        // value is 54985
 
         hashmap_keys.add("one");
         hashmap_keys.add("two");
@@ -55,12 +53,12 @@ public class day1 {
             String res = digits.get(digit);
             if (res.length() > 2){
                 String val = res.charAt(0) + String.valueOf(res.charAt(res.length() - 1));
-                totalCalibration += Integer.valueOf(val);
+                totalCalibration += Integer.parseInt(val);
             } else if (res.length() == 2) {
-                totalCalibration += Integer.valueOf(res);
+                totalCalibration += Integer.parseInt(res);
             } else if (res.length() == 1) {
                 String val = res.charAt(0) + String.valueOf(res.charAt(0));
-                totalCalibration += Integer.valueOf(val);
+                totalCalibration += Integer.parseInt(val);
             }
         }
 
