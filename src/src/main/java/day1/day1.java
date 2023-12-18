@@ -1,5 +1,5 @@
 package day1;
-// Java utility package below
+// Java utility packages below
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -43,8 +43,8 @@ public class day1 {
         readFile(calibrationValues);
 
         for (int calibration = 0; calibration < calibrationValues.size(); calibration++){
-            String res = removeNonNumerical(calibrationValues.get(calibration));
-            //String res = removeAllNonNumerical(calibrationValues.get(calibration), hashmap_keys, conversions);
+            //String res = removeNonNumerical(calibrationValues.get(calibration));
+            String res = removeAllNonNumerical(calibrationValues.get(calibration), hashmap_keys, conversions);
             System.out.println(res);
             digits.add(res);
         }
@@ -62,13 +62,13 @@ public class day1 {
             }
         }
 
-        //System.out.println("Total calibration value for day 1 part 1 is: " + total_calibration);
+        //System.out.println("Total calibration value for day 1 part 1 is: " + totalCalibration);
         System.out.println("Total calibration value for day 1 part 2 is: " + totalCalibration);
     }
 
     public static void readFile(ArrayList<String> calibration_values){
         try {
-            File myObj = new File("src/main/java/day1/input1.txt");
+            File myObj = new File("src/src/main/java/day1/input1.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
